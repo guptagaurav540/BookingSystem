@@ -5,6 +5,6 @@ import com.BookingSyatem.BookingSystem.entity.Product;
 public interface InventoryManagementService {
     Product addProduct(Product product);
     Product updateProduct(Product product);
-    Product getProductById(String id);
-    void deleteProduct(String id);
+    Product getProductById(Long id);
+    void deleteProduct(Long id);
 }

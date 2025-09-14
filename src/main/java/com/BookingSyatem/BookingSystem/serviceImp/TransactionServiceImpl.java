@@ -15,7 +15,7 @@ public class TransactionServiceImpl implements TransactionService {
     TransactionRepository transactionRepository;
 
     @Override
-    public Transaction createTransaction(String userId, String amount, double payedAmount, double dueAmount) {
+    public Transaction createTransaction(String userId, Double amount, double payedAmount, double dueAmount) {
         try {
             Transaction transaction = new Transaction();
             transaction.setUserId(userId);
@@ -32,7 +32,7 @@ public class TransactionServiceImpl implements TransactionService {
 
         }
     }
-    public Transaction getTransactionById(String transactionId) {
+    public Transaction getTransactionById(Long transactionId) {
         return transactionRepository.findByTransactionId(transactionId);
     }
     public Transaction updateTransaction(Transaction transaction) {

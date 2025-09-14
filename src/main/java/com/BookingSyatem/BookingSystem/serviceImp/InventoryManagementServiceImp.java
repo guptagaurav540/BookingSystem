@@ -30,12 +30,12 @@ public class InventoryManagementServiceImp implements InventoryManagementService
     }
 
     @Override
-    public Product getProductById(String id) {
+    public Product getProductById(Long id) {
         return productRepository.getByProductId(id);
     }
 
     @Override
-    public void deleteProduct(String id) {
+    public void deleteProduct(Long id) {
         productRepository.deleteByProductId(id);
 
     }

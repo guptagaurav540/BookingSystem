@@ -13,19 +13,19 @@ public class Transaction {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "transaction_id", nullable = false, unique = true)
-    private String transactionId;
+    private Long transactionId;
 
     @Column(name = "userId", nullable = false)
     private String userId;
 
     @Column(name = "amount", nullable = false)
-    private String amount;
+    private Double amount;
 
-    public String getTransactionId() {
+    public Long getTransactionId() {
         return transactionId;
     }
 
-    public void setTransactionId(String transactionId) {
+    public void setTransactionId(Long transactionId) {
         this.transactionId = transactionId;
     }
 
@@ -37,11 +37,11 @@ public class Transaction {
         this.userId = userId;
     }
 
-    public String getAmount() {
+    public Double getAmount() {
         return amount;
     }
 
-    public void setAmount(String amount) {
+    public void setAmount(Double amount) {
         this.amount = amount;
     }
 

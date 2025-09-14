@@ -10,43 +10,36 @@ public class Invoice {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "invoice_id", nullable = false, unique = true)
-    String invoiceId;
-    @Column(name = "booking_id", nullable = false)
-    String bookingId;
-    @Column(name = "user_id", nullable = false)
-    String userId;
-    @Column(name = "product_id", nullable = false)
-    String productId;
+    Long invoiceId;
 
-    public String getInvoiceId() {
+    @Column(name = "user_id", nullable = false)
+    Long userId;
+
+    @Column(name = "product_id", nullable = false)
+    Long productId;
+
+    public Long getInvoiceId() {
         return invoiceId;
     }
 
-    public void setInvoiceId(String invoiceId) {
+    public void setInvoiceId(Long invoiceId) {
         this.invoiceId = invoiceId;
     }
 
-    public String getBookingId() {
-        return bookingId;
-    }
 
-    public void setBookingId(String bookingId) {
-        this.bookingId = bookingId;
-    }
-
-    public String getUserId() {
+    public Long getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(Long userId) {
         this.userId = userId;
     }
 
-    public String getProductId() {
+    public Long getProductId() {
         return productId;
     }
 
-    public void setProductId(String productId) {
+    public void setProductId(Long productId) {
         this.productId = productId;
     }
 

@@ -20,12 +20,12 @@ public class UserManagementServiceImp implements UserManagement {
     }
 
     @Override
-    public User getUserById(String id) {
+    public User getUserById(Long id) {
         return userRepository.findByUserId(id).orElse(null);
     }
 
     @Override
-    public User updateUser(String id, User user) {
+    public User updateUser(Long id, User user) {
         Optional<User> existingUser = userRepository.findByUserId(id);
         if (existingUser.isPresent()) {
             user.setUserId(id);
@@ -35,7 +35,7 @@ public class UserManagementServiceImp implements UserManagement {
     }
 
     @Override
-    public void deleteUser(String id) {
+    public void deleteUser(Long id) {
         userRepository.deleteByUserId(id);
     }
 }

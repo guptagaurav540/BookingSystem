@@ -3,11 +3,13 @@ package com.BookingSyatem.BookingSystem.repository;
 
 import com.BookingSyatem.BookingSystem.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
+@Repository
 public interface UserRepository extends JpaRepository<User, Long> {
-    Optional<User> findByUserId(String string);
+    Optional<User> findByUserId(Long string);
 
-    void deleteByUserId(String id);
+    void deleteByUserId(Long id);
 }
