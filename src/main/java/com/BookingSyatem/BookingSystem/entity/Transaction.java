@@ -16,7 +16,7 @@ public class Transaction {
     private Long transactionId;
 
     @Column(name = "userId", nullable = false)
-    private String userId;
+    private Long userId;
 
     @Column(name = "amount", nullable = false)
     private Double amount;
@@ -29,11 +29,11 @@ public class Transaction {
         this.transactionId = transactionId;
     }
 
-    public String getUserId() {
+    public Long getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(Long userId) {
         this.userId = userId;
     }
 

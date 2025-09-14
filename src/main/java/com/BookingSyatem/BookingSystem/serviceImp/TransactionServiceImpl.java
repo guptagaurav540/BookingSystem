@@ -15,7 +15,7 @@ public class TransactionServiceImpl implements TransactionService {
     TransactionRepository transactionRepository;
 
     @Override
-    public Transaction createTransaction(String userId, Double amount, double payedAmount, double dueAmount) {
+    public Transaction createTransaction(Long userId, Double amount, double payedAmount, double dueAmount) {
         try {
             Transaction transaction = new Transaction();
             transaction.setUserId(userId);

@@ -18,6 +18,26 @@ public class Invoice {
     @Column(name = "product_id", nullable = false)
     Long productId;
 
+    @Column(name = "Transactional id")
+    Long transactionId;
+
+    @Column(name = "quantity", nullable = false)
+    String quantity;
+    @Column(name = "selling_price", nullable = false)
+    double sellingPrice;
+    @Column(name = "total_amount", nullable = false)
+    double totalAmount;
+    @Column(name = "discount")
+    double discount;
+
+
+    public Long getTransactionId() {
+        return transactionId;
+    }
+    public void setTransactionId(Long transactionId) {
+        this.transactionId = transactionId;
+    }
+
     public Long getInvoiceId() {
         return invoiceId;
     }
@@ -74,13 +94,4 @@ public class Invoice {
     public void setDiscount(double discount) {
         this.discount = discount;
     }
-
-    @Column(name = "quantity", nullable = false)
-    String quantity;
-    @Column(name = "selling_price", nullable = false)
-    double sellingPrice;
-    @Column(name = "total_amount", nullable = false)
-    double totalAmount;
-    @Column(name = "discount")
-    double discount;
 }

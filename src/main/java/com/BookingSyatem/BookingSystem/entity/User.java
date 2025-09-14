@@ -70,4 +70,8 @@ public class User {
     String address;
     @Column(name = "shop_name")
     String shopName;
+
+    public User orElseGet(Object o) {
+        return null;
+    }
 }
